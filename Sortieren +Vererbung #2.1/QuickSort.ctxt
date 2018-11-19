@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=QuickSort()
+comment1.params=pArray\ pN
+comment1.target=void\ quickSort(int[],\ int)
+comment2.params=array\ low\ high
+comment2.target=int\ partition(int[],\ int,\ int)
+comment2.text=\ This\ function\ takes\ last\ element\ as\ pivot,\ \r\n\ \ \ \ \ \ \ places\ the\ pivot\ element\ at\ its\ correct\ \r\n\ \ \ \ \ \ \ position\ in\ sorted\ arrayay,\ and\ places\ all\ \r\n\ \ \ \ \ \ \ smaller\ (smaller\ than\ pivot)\ to\ left\ of\ \r\n\ \ \ \ \ \ \ pivot\ and\ all\ greater\ elements\ to\ right\ \r\nof\ pivot
+comment3.params=array\ low\ high
+comment3.target=void\ sort(int[],\ int,\ int)
+comment3.text=\ The\ main\ function\ that\ implements\ QuickSort()\ \r\n\ \ \ \ \ \ arrayay[]\ -->\ arrayay\ to\ be\ sorted,\ \r\n\ \ \ \ \ \ low\ \ -->\ Starting\ index,\ \r\nhigh\ \ -->\ Ending\ index
+numComments=4

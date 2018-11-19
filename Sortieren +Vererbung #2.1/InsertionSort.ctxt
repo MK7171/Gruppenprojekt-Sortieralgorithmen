@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=InsertionSort()
+comment1.params=pArray\ pN
+comment1.target=void\ insertionSort(int[],\ int)
+numComments=2
