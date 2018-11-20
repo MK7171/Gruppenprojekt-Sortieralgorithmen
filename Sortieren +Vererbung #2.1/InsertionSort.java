@@ -8,7 +8,7 @@ public class InsertionSort extends Sortieralgorithmen
     // Bezugsobjekte
 
     // Attribute
-
+    double t;
     // Konstruktor
     public InsertionSort()
     {
@@ -23,7 +23,7 @@ public class InsertionSort extends Sortieralgorithmen
         {
             array[i] = pArray[i];
         }
-        
+        meineUhr.starte();
         for (int i=1; i<pN; ++i) 
         { 
             int key = array[i]; 
@@ -37,6 +37,15 @@ public class InsertionSort extends Sortieralgorithmen
             array[j+1] = key; 
             println(); //ausgeben von aktuellem Array
         } 
+        meineUhr.stoppe()
+        t = meineUhr.gestoppteZeit();
     }
+    
+        /*
+    */ 
+    public double time()
+        {
+            return (t);
+        }
 
 }
