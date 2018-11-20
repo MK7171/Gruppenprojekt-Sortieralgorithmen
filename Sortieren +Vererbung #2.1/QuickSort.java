@@ -16,6 +16,13 @@ public class QuickSort extends Sortieralgorithmen
     }
     // Dienste
     
+    /* Diese Klasse ist ein "Vermittler" zwischen der SuMAnwendung() und dem
+     * etwas komplexerem QuickSort. Hier ermittelt das Programm die Array 
+     * länge welche später noch gebraucht wird (als high bzw pivot).
+     * Außerdem wird ein "Vermittler Array" gleich dem Original Array gesetzt.
+     * So ändert das Programm nichts am Original Array, sodass auf diesen 
+     * weiterhin zugegriffen werden kann.
+     * */
     public void quickSort(int pArray[], int pN)
     {
         array = new int[pN];
@@ -23,34 +30,51 @@ public class QuickSort extends Sortieralgorithmen
         {
             array[i] = pArray[i];
         }
+        meineUhr.starte();
         this.sort(array, 0 , pN-1);
+        meineUhr.stoppe();
+        System.out.println(meineUhr.gestoppteZeit());
     }
     
         
-     /* This function takes last element as pivot, 
-       places the pivot element at its correct 
-       position in sorted arrayay, and places all 
-       smaller (smaller than pivot) to left of 
-       pivot and all greater elements to right 
-       of pivot */
+     /* In dieser Methode wird das Letzte Element (high  bzw. Pivot) an seine
+      * Korrekte Stelle gelegt. Daraufhin werden alle Elemente welche einen 
+      * größeren Wert haben als das Pivot, auf dessen recht Seite verschoben
+      * und alle Elemente welche einen kleineren Wert haben kommen auf die
+      * linke Seite        
+      *                         1,5,1,7,4,8,3
+      *                                     ^
+      *                                     |
+      *                               high bzw. Pivot
+      *                               
+      *                               
+      *                               
+      *                               
+      *                                   
+      *              nach der Methode:     1,1,3,8,4,7,5
+      *                                        ^
+      *                                        |
+      *                                  high bzw. Pivot
+      *                         
+      **/
     int partition(int array[], int low, int high) 
     { 
         int pivot = array[high];  
-        int i = (low-1); // index of smaller element 
+        int i = (low-1); // index des kleineren Elementes
         for (int j=low; j<high; j++) 
         { 
-            // If current element is smaller than or 
-            // equal to pivot 
+            // Falls das aktuelle Objekt kleiner oder gleich dem
+            //dem pivot Element ist
             if (array[j] <= pivot) 
             { 
                 i++; 
   
-                // swap array[i] and array[j] 
+                // tauscht array[i] und array[j] 
                 int temp = array[i]; 
                 array[i] = array[j]; 
                 array[j] = temp; 
     
-                println();               
+                println();   //ausgeben von aktuellem Array            
             } 
         } 
   
@@ -59,27 +83,27 @@ public class QuickSort extends Sortieralgorithmen
         array[i+1] = array[high]; 
         array[high] = temp; 
   
-        println();
+        println();   //ausgeben von aktuellem Array
                 
         return i+1; 
     } 
     
-    /* The main function that implements QuickSort() 
-      arrayay[] --> arrayay to be sorted, 
-      low  --> Starting index, 
-      high  --> Ending index */
+    /* Die Hauptbegiffe die von QuickSort() im folgenden genutzt werden
+      array[] --> der array der im fogenden sortiert werden soll, 
+      low  --> Start Index (in diesem fall einfach 0), 
+      high  --> Der letzte Index im Array */
     void sort(int array[], int low, int high) 
     { 
         if (low < high) 
         { 
-            /* pi is partitioning index, array[pi] is  
-              now at right place */
-            int pi = partition(array, low, high); 
+            /* pi ist der seperations index, array[xy] wird an die 
+             * richtige stelle gepackt
+              */
+            int xy = partition(array, low, high); 
   
-            // Recursively sort elements before 
-            // partition and after partition 
-            sort(array, low, pi-1); 
-            sort(array, pi+1, high); 
+            //Rekursiver Aufruf zum Sortieren              
+            sort(array, low, xy-1); 
+            sort(array, xy+1, high); 
         } 
     } 
     
