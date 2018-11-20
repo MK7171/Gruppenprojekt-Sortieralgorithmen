@@ -106,5 +106,10 @@ public class QuickSort extends Sortieralgorithmen
             sort(array, xy+1, high); 
         } 
     } 
-    
+        /*
+    */ 
+    public double time()
+        {
+            return (t);
+        }
 }
