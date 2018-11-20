@@ -8,7 +8,7 @@ public class InsertionSort extends Sortieralgorithmen
     // Bezugsobjekte
 
     // Attribute
-    double t;
+    
     // Konstruktor
     public InsertionSort()
     {
