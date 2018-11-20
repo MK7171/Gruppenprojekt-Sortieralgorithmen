@@ -50,10 +50,5 @@ public class SelectionSort extends Sortieralgorithmen
         t = meineUhr.gestoppteZeit();
     }
     
-    /*
-    */ 
-    public double time()
-        {
-            return (t);
-        }
+
 }
