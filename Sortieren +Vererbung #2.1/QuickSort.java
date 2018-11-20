@@ -8,7 +8,7 @@ public class QuickSort extends Sortieralgorithmen
     // Bezugsobjekte
     
     // Attribute
-
+    double t;
     // Konstruktor
     public QuickSort()
     {
@@ -33,8 +33,8 @@ public class QuickSort extends Sortieralgorithmen
         meineUhr.starte();
         this.sort(array, 0 , pN-1);
         meineUhr.stoppe();
-        System.out.println(meineUhr.gestoppteZeit());
-    }
+        t = meineUhr.gestoppteZeit();
+        }
     
         
      /* In dieser Methode wird das Letzte Element (high  bzw. Pivot) an seine
