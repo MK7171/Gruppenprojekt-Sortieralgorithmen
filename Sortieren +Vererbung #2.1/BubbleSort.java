@@ -45,6 +45,6 @@ public class BubbleSort extends Sortieralgorithmen
             {break;}
         }
         meineUhr.stoppe();
-        t = meineUhr.gestoppteZeit()
+        t = meineUhr.gestoppteZeit();
     }
 } 
