@@ -7,6 +7,7 @@ import sum.komponenten.*;
 public class Sortieralgorithmen
 {
     // Bezugsobjekte
+    Uhr meineUhr;
     protected int [] array;
     protected Liste<Etikett> e;
 
@@ -18,6 +19,7 @@ public class Sortieralgorithmen
     // Konstruktor
     public Sortieralgorithmen()
     {
+        meineUhr = new Uhr();
         e = new Liste<Etikett>();
     }
 
