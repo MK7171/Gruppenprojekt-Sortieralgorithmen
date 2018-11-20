@@ -33,7 +33,7 @@ public class QuickSort extends Sortieralgorithmen
         meineUhr.starte();
         this.sort(array, 0 , pN-1);
         meineUhr.stoppe();
-        System.out.println(meineUhr.gestoppteZeit());
+        new int t = meineUhr.gestoppteZeit();
     }
     
         
@@ -107,4 +107,10 @@ public class QuickSort extends Sortieralgorithmen
         } 
     } 
     
+    /*
+    */ 
+    public int time();
+    {
+        return t;
+    }
 }
