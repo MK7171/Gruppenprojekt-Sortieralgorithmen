@@ -36,6 +36,8 @@ public class Sortieralgorithmen
         }
         return inhalt;
     }
+    
+    //Das Array wird als Zahlenkette auf dem Bildschirm dargestellt
 
     public void println()
     {
