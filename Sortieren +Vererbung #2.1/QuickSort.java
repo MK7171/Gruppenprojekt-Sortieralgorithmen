@@ -8,7 +8,7 @@ public class QuickSort extends Sortieralgorithmen
     // Bezugsobjekte
     
     // Attribute
-    double t;
+    
     // Konstruktor
     public QuickSort()
     {
