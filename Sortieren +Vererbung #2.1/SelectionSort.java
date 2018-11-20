@@ -23,7 +23,9 @@ public class SelectionSort extends Sortieralgorithmen
         {
             array[i] = pArray[i];
         }
-
+        
+        meineUhr.starte();
+        
         // One by one move boundary of unsorted subarray 
         for (int i = 0; i < pN-1; i++) 
         { 
@@ -44,5 +46,14 @@ public class SelectionSort extends Sortieralgorithmen
             array[i] = temp; 
             println();  //ausgeben von aktuellem Array
         } 
+        meineUhr.stoppe();
+        t = meineUhr.gestoppteZeit();
     }
+    
+    /*
+    */ 
+    public double time()
+        {
+            return (t);
+        }
 }
