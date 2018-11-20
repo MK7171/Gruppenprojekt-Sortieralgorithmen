@@ -53,7 +53,7 @@ public class SuMAnwendung extends EBAnwendung
         bSelection = new Knopf(400,10,100,25,"Selection Sort","bSelectionGeklickt");
         bQuick = new Knopf(500,10,100,25,"Quick Sort","bQuickGeklickt");
 
-        zeit = new Etikett(800,50,100,30,"Gestoppte Zeit");
+        zeit = new Etikett(800,10,100,30,"Gestoppte Zeit");
         test = new Etikett(10,50,990,25,"");
         test.setzeSchriftgroesse(20);
 
