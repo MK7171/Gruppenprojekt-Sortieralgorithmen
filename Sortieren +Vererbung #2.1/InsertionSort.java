@@ -41,11 +41,5 @@ public class InsertionSort extends Sortieralgorithmen
         t = meineUhr.gestoppteZeit();
     }
     
-        /*
-    */ 
-    public double time()
-        {
-            return (t);
-        }
 
 }
