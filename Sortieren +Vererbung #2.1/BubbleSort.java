@@ -25,6 +25,8 @@ public class BubbleSort extends Sortieralgorithmen
             array[i] = pArray[i];
         }
         
+        meineUhr.starte();
+        
         for(int w=0; w<pN-1; w++) //w wiederholungen
         {
             swapped = false;
@@ -42,5 +44,7 @@ public class BubbleSort extends Sortieralgorithmen
             if(!swapped) //Damit früher beendete Sortierung festgestellt werden kann (Zeitkürzung)
             {break;}
         }
+        meineUhr.stoppe();
+        t = meineUhr.gestoppteZeit()
     }
 } 
