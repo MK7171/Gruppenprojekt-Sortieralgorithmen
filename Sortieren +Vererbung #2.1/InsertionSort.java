@@ -37,7 +37,7 @@ public class InsertionSort extends Sortieralgorithmen
             array[j+1] = key; 
             println(); //ausgeben von aktuellem Array
         } 
-        meineUhr.stoppe()
+        meineUhr.stoppe();
         t = meineUhr.gestoppteZeit();
     }
     
