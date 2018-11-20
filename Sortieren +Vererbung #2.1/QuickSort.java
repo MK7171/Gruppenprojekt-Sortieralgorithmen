@@ -106,5 +106,24 @@ public class QuickSort extends Sortieralgorithmen
             sort(array, xy+1, high); 
         } 
     } 
+    
+    
+            /*Gibt Wert der gestoppten Zeit zurück
+         * als mittelwert von 10 sortierungen
+    */ 
+    public double time(int array[] ,int  n)
+        {
+             
+            for(int i=0; i<9 ; i++) //i index
+            {
+                f = f + t;   //die neuen Zahlen werden addiert
+                this.quickSort(array, n);      //erneutes Sortieren
+            }
+            
+            t = f / 10; //Mittlere Wert wird berechnet
+            f = 0;
+            return (t);  //mittlerer Wert wird zurück gegeben
+
+
 
 }
