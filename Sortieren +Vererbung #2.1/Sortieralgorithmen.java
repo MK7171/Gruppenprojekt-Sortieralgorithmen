@@ -1,5 +1,6 @@
 import sum.strukturen.*;
 import sum.komponenten.*;
+import sum.werkzeuge.*;
 /**
  * @author 
  * @version 
@@ -19,8 +20,8 @@ public class Sortieralgorithmen
     // Konstruktor
     public Sortieralgorithmen()
     {
-        meineUhr = new Uhr();
         e = new Liste<Etikett>();
+        meineUhr = new Uhr();
     }
 
     // Dienste

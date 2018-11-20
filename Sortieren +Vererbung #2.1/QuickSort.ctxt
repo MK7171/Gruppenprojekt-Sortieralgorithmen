@@ -1,12 +1,15 @@
 #BlueJ class context
-comment0.params=
-comment0.target=QuickSort()
-comment1.params=pArray\ pN
-comment1.target=void\ quickSort(int[],\ int)
-comment2.params=array\ low\ high
-comment2.target=int\ partition(int[],\ int,\ int)
-comment2.text=\ This\ function\ takes\ last\ element\ as\ pivot,\ \r\n\ \ \ \ \ \ \ places\ the\ pivot\ element\ at\ its\ correct\ \r\n\ \ \ \ \ \ \ position\ in\ sorted\ arrayay,\ and\ places\ all\ \r\n\ \ \ \ \ \ \ smaller\ (smaller\ than\ pivot)\ to\ left\ of\ \r\n\ \ \ \ \ \ \ pivot\ and\ all\ greater\ elements\ to\ right\ \r\nof\ pivot
+comment0.target=QuickSort
+comment0.text=\r\n\ @author\ \r\n\ @version\ \r\n
+comment1.params=
+comment1.target=QuickSort()
+comment2.params=pArray\ pN
+comment2.target=void\ quickSort(int[],\ int)
+comment2.text=\ Diese\ Klasse\ ist\ ein\ "Vermittler"\ zwischen\ der\ SuMAnwendung()\ und\ dem\r\n\ etwas\ komplexerem\ QuickSort.\ Hier\ ermittelt\ das\ Programm\ die\ Array\ \r\n\ l\u00E4nge\ welche\ sp\u00E4ter\ noch\ gebraucht\ wird\ (als\ high\ bzw\ pivot).\r\n\ Au\u00DFerdem\ wird\ ein\ "Vermittler\ Array"\ gleich\ dem\ Original\ Array\ gesetzt.\r\n\ So\ \u00E4ndert\ das\ Programm\ nichts\ am\ Original\ Array,\ sodass\ auf\ diesen\ \r\n\ weiterhin\ zugegriffen\ werden\ kann.\r\n
 comment3.params=array\ low\ high
-comment3.target=void\ sort(int[],\ int,\ int)
-comment3.text=\ The\ main\ function\ that\ implements\ QuickSort()\ \r\n\ \ \ \ \ \ arrayay[]\ -->\ arrayay\ to\ be\ sorted,\ \r\n\ \ \ \ \ \ low\ \ -->\ Starting\ index,\ \r\nhigh\ \ -->\ Ending\ index
-numComments=4
+comment3.target=int\ partition(int[],\ int,\ int)
+comment3.text=\ In\ dieser\ Methode\ wird\ das\ Letzte\ Element\ (high\ \ bzw.\ Pivot)\ an\ seine\r\n\ Korrekte\ Stelle\ gelegt.\ Daraufhin\ werden\ alle\ Elemente\ welche\ einen\ \r\n\ gr\u00F6\u00DFeren\ Wert\ haben\ als\ das\ Pivot,\ auf\ dessen\ recht\ Seite\ verschoben\r\n\ und\ alle\ Elemente\ welche\ einen\ kleineren\ Wert\ haben\ kommen\ auf\ die\r\n\ linke\ Seite\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1,5,1,7,4,8,3\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ^\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ high\ bzw.\ Pivot\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ nach\ der\ Methode\:\ \ \ \ \ 1,1,3,8,4,7,5\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ^\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ high\ bzw.\ Pivot\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n
+comment4.params=array\ low\ high
+comment4.target=void\ sort(int[],\ int,\ int)
+comment4.text=\ Die\ Hauptbegiffe\ die\ von\ QuickSort()\ im\ folgenden\ genutzt\ werden\r\n\ \ \ \ \ \ array[]\ -->\ der\ array\ der\ im\ fogenden\ sortiert\ werden\ soll,\ \r\n\ \ \ \ \ \ low\ \ -->\ Start\ Index\ (in\ diesem\ fall\ einfach\ 0),\ \r\nhigh\ \ -->\ Der\ letzte\ Index\ im\ Array
+numComments=5

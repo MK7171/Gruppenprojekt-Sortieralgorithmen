@@ -16,15 +16,13 @@ public class SuMAnwendung extends EBAnwendung
     QuickSort quick; //Deklarierung der Klasse für Quick Sort
 
     Knopf bFillArray; //Knopf, um das Array zu füllen
-
-    Auswahl aLaenge; //Dropdown zur Auswahl der Arraylänge
-
+    Textfeld tAuswahl; //Textfeld zur Auswahl der Arraylänge
+    //Etikett eAuswahl; //(max. 20, etc.)
     Knopf bBubble; //Knopf, um das Array mit Bubble Sort zu sortieren
     Knopf bInsertion; //Knopf, um das Array mit Insertion Sort zu sortieren
     Knopf bSelection; //Knopf, um das Array mit Selection Sort zu sortieren
     Knopf bQuick; //Knopf, um das Array mit Bubble Sort zu sortieren
 
-    Etikett zeit; //Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
     Etikett test; //Etikett, das den Ursprungszustand des Arrays enthält
 
     Rechner r; //Für die Zufallszahlen, die das Array füllen werden
@@ -37,23 +35,21 @@ public class SuMAnwendung extends EBAnwendung
     public SuMAnwendung()
     {
         super(1000,600);
-
+        
         bubble = new BubbleSort();
         insertion = new InsertionSort();
         selection = new SelectionSort();
         quick = new QuickSort();
 
         bFillArray = new Knopf(10,10,75,25,"Fill Array","bFillArrayGeklickt");
-
-        aLaenge = new Auswahl(100,10,50,25); 
-        fillAuswahlen();
+        tAuswahl = new Textfeld(100,10,25,25,""); 
+        //eAuswahl = new Etikett(130,10,50,25,"(max. 20)");
 
         bBubble = new Knopf(200,10,100,25,"Bubble Sort","bBubbleGeklickt");
         bInsertion = new Knopf(300,10,100,25,"Insertion Sort","bInsertionGeklickt");
         bSelection = new Knopf(400,10,100,25,"Selection Sort","bSelectionGeklickt");
         bQuick = new Knopf(500,10,100,25,"Quick Sort","bQuickGeklickt");
 
-        zeit = new Etikett(30,30,950,50,"")
         test = new Etikett(10,50,990,25,"");
         test.setzeSchriftgroesse(20);
 
@@ -61,14 +57,6 @@ public class SuMAnwendung extends EBAnwendung
     }
 
     // Dienste
-    public void fillAuswahlen()
-    {
-        for(int i=3; i<=100; i++)
-        {
-            aLaenge.haengeAn(""+i);
-        }
-    }
-
     public void bFillArrayGeklickt()
     {
         fillArray();
@@ -86,10 +74,13 @@ public class SuMAnwendung extends EBAnwendung
 
     public void fillArray()
     {
-        n = aLaenge.index()+2;
-        array = new int[n]; //Array wird mit n Plätzen initialisiert
-        for(int i=0; i<array.length; i++)
-        {array[i] = r.ganzeZufallszahl(1,5);}
+        if(tAuswahl.inhaltAlsText()!="")
+        {
+            n = Integer.parseInt(tAuswahl.inhaltAlsText());
+            array = new int[n]; //Array wird mit n Plätzen initialisiert
+            for(int i=0; i<array.length; i++)
+            {array[i] = r.ganzeZufallszahl(1,10);}
+        }
     }
 
     public void printNumbers()
@@ -143,32 +134,31 @@ public class SuMAnwendung extends EBAnwendung
     {
         if(sorted)
         {
-            bubble.deleteln();
-            insertion.deleteln();
-            selection.deleteln();
-            quick.deleteln();
+        bubble.deleteln();
+        insertion.deleteln();
+        selection.deleteln();
+        quick.deleteln();
         }
         if(test.inhaltAlsText()!="")
         {
             selection.selectionSort(array, n);
             sorted = true;
         }
-    }
-
+        }
+        
     public void bQuickGeklickt()
     {
         if(sorted)
         {
-            bubble.deleteln();
-            insertion.deleteln();
-            selection.deleteln();
-            quick.deleteln();
+        bubble.deleteln();
+        insertion.deleteln();
+        selection.deleteln();
+        quick.deleteln();
         }
         if(test.inhaltAlsText()!="")
         {
             quick.quickSort(array, n);
             sorted = true;
-            zeit.setzeInhalt(quick.time());
         }
     }
 }
