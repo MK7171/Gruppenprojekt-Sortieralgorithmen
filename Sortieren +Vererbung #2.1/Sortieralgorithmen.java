@@ -14,7 +14,7 @@ public class Sortieralgorithmen
 
     // Attribute
     protected int zeile = 1;
-
+    double t;
     protected String inhalt = "";
 
     // Konstruktor
