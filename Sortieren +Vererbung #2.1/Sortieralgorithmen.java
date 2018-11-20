@@ -54,4 +54,12 @@ public class Sortieralgorithmen
         }
         zeile = 1;
     }
+    
+    
+    /*Gibt Wert der gestoppten Zeit zurück
+    */ 
+    public double time()
+        {
+            return (t);
+        }
 }
