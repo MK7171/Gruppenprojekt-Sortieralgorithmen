@@ -159,6 +159,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             quick.quickSort(array, n);
             sorted = true;
+            zeit.setzeInhalt("Quicksort:" + quick.time());
         }
     }
 }
