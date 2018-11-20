@@ -127,6 +127,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             insertion.insertionSort(array, n);
             sorted = true;
+            zeit.setzeInhalt("InsertionSort:" + insertion.time());
         } 
     }
 
