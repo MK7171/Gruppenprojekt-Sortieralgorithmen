@@ -79,7 +79,7 @@ public class SuMAnwendung extends EBAnwendung
             bubble.deleteln();
             insertion.deleteln();
             selection.deleteln();
-            //quick.deleteln();
+            quick.deleteln();
         } //->damit die Sortierschritte auch gelöscht werden
         sorted = false;
     }
