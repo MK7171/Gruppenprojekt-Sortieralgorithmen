@@ -20,9 +20,9 @@ public class BubbleSort extends Sortieralgorithmen
     public void bubbleSort(int pArray[], int pN)
     {
         array = new int[pN];
-        for(int i=0; i<pArray.length; i++)
+        for(int i=0; i<pArray.length; i++) //solange i kleiner ist als die Laenge von pArray wird i um 1 erhoeht sodass am Ende alle Stellen gleichgesetzt sind
         {
-            array[i] = pArray[i];
+            array[i] = pArray[i]; //Das Array dieser Klasse wird dem der anderen gleichgesetzt
         }
         
         meineUhr.starte();
