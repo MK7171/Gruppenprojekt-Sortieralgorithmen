@@ -24,6 +24,7 @@ public class SuMAnwendung extends EBAnwendung
     Knopf bSelection; //Knopf, um das Array mit Selection Sort zu sortieren
     Knopf bQuick; //Knopf, um das Array mit Bubble Sort zu sortieren
 
+    Etikett zeit; //Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
     Etikett test; //Etikett, das den Ursprungszustand des Arrays enthält
 
     Rechner r; //Für die Zufallszahlen, die das Array füllen werden
@@ -52,6 +53,7 @@ public class SuMAnwendung extends EBAnwendung
         bSelection = new Knopf(400,10,100,25,"Selection Sort","bSelectionGeklickt");
         bQuick = new Knopf(500,10,100,25,"Quick Sort","bQuickGeklickt");
 
+        zeit = new Etikett(30,30,950,50,"")
         test = new Etikett(10,50,990,25,"");
         test.setzeSchriftgroesse(20);
 
@@ -166,6 +168,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             quick.quickSort(array, n);
             sorted = true;
+            zeit.setzeInhalt(quick.time());
         }
     }
 }
