@@ -6,9 +6,9 @@ alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar
 zumindest die folgenden Angaben umfassen:
 ------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG:
+PROJEKTBEZEICHNUNG: Sortieren von Zahlen
 PROJEKTZWECK:
 VERSION oder DATUM:
 WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN):
-BENUTZERHINWEISE:
+AUTOR(EN):Maja , Dagh ,Paul
+BENUTZERHINWEISE: einfach machen
