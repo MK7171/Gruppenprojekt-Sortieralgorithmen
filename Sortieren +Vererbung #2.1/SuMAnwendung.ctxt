@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=SuMAnwendung()
+comment0.target=SuMAnwendung
+comment0.text=\r\n\ @author\r\n\ @version\r\n
 comment1.params=
-comment1.target=void\ fillAuswahlen()
+comment1.target=SuMAnwendung()
 comment2.params=
 comment2.target=void\ bFillArrayGeklickt()
 comment3.params=

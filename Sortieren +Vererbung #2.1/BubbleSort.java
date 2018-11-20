@@ -35,7 +35,7 @@ public class BubbleSort extends Sortieralgorithmen
                     int temporary = array[i];
                     array[i] = array[i+1];
                     array[i+1] = temporary;
-                    println();
+                    println(); //ausgeben von aktuellem Array
                     swapped = true;
                 }
             }

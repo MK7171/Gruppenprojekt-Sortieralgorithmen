@@ -1,0 +1,39 @@
+Class documentation
+<---- javadoc command: ---->
+E:\bluej mit sum\BlueJ-windows-410\bluej\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+E:\bluej mit sum\BlueJ-windows-410\bluej\lib\bluejcore.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\junit-4.11.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\hamcrest-core-1.3.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\lang-stride.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\mysql-connector-java-5.1.15-bin.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\pi4j-core.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\pi4j-device.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\pi4j-gpio-extension.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\pi4j-service.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\QTJava.zip;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMEreignis.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMKern.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMKomponenten.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMMultimedia.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMNetz.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMSQL.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMStrukturen.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\SuMWerkzeuge.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\xpp3_min-1.1.3.4.I.jar;E:\bluej mit sum\BlueJ-windows-410\bluej\lib\userlib\xstream-1.1.2.jar;E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1
+-d
+E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\BubbleSort.java
+<---- end of javadoc command ---->
+Loading source file E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\BubbleSort.java...
+Constructing Javadoc information...
+E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\BubbleSort.java:6: warning - @author tag has no arguments.
+E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\BubbleSort.java:6: warning - @version tag has no arguments.
+Standard Doclet version 1.8.0_131
+Building tree for all the packages and classes...
+Generating E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc\BubbleSort.html...
+Generating E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc\package-frame.html...
+Generating E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc\package-summary.html...
+Generating E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc\allclasses-frame.html...
+Generating E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc\allclasses-noframe.html...
+Generating E:\Informatik\Leistungskurs\Sortieren +Vererbung #2.1\doc\index.html...
+2 warnings

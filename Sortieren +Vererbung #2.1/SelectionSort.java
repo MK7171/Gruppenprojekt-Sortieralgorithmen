@@ -42,7 +42,7 @@ public class SelectionSort extends Sortieralgorithmen
             int temp = array[min_idx]; 
             array[min_idx] = array[i]; 
             array[i] = temp; 
-            println();
+            println();  //ausgeben von aktuellem Array
         } 
     }
 }
