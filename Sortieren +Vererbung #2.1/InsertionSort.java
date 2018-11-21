@@ -19,11 +19,11 @@ public class InsertionSort extends Sortieralgorithmen
     void insertionSort(int pArray[], int pN) 
     { 
         array = new int[pN];
-        for(int i=0; i<pArray.length; i++) //solange i kleiner ist als die Laenge von pArray wird i um 1 erhoeht sodass am Ende alle Stellen gleichgesetzt sind
+        for(int i=0; i<pArray.length; i++) // Solange i kleiner ist als die Laenge von pArray wird i um 1 erhoeht sodass am Ende alle Stellen gleichgesetzt sind
         {
-            array[i] = pArray[i]; //Das Array dieser Klasse wird dem der anderen gleichgesetzt
+            array[i] = pArray[i]; // Das Array dieser Klasse wird dem der anderen gleichgesetzt
         }
-        meineUhr.starte(); //startet die Stoppuhr
+        meineUhr.starte(); // Startet die Stoppuhr
         /* Die For-Schleife läuft einmal weniger durch als das Array lang ist. Dies kommt daher, dass jede Position genau 
            einmal mit den davor liegenden verglichen wird außer die erste. Bei einem Array der länge 28 läuft sie also 9 mal durch */
         
@@ -44,9 +44,9 @@ public class InsertionSort extends Sortieralgorithmen
                 j = j-1; 
             } 
             array[j+1] = key; 
-            println(); //Ausgeben von aktuellem Array
+            println(); // Ausgeben von aktuellem Array
         } 
-        meineUhr.stoppe(); //stoppt die Stoppuhr
+        meineUhr.stoppe(); // Stoppt die Stoppuhr
         t = meineUhr.gestoppteZeit();
     }
     
@@ -57,16 +57,16 @@ public class InsertionSort extends Sortieralgorithmen
     public double time(int array[] ,int  n)
         {
              
-            for(int i=0; i<9 ; i++) //i index
+            for(int i=0; i<9 ; i++) // i index
             {
                 this.deleteln();
-                f = f + t; //Die neuen Zahlen werden addiert
-                this.insertionSort(array, n); //erneutes Sortieren
+                f = f + t; // Die neuen Zahlen werden addiert
+                this.insertionSort(array, n); // Erneutes Sortieren
             }
             
-            t = f / 10; //Mittlerer Wert wird berechnet
+            t = f / 10; // Mittlerer Wert wird berechnet
             f = 0;
-            return (t); //Mittlerer Wert wird zurück gegeben
+            return (t); // Mittlerer Wert wird zurück gegeben
             
         }
 
