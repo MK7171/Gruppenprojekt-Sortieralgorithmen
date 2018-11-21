@@ -16,9 +16,9 @@ public class MergeSort extends Sortieralgorithmen
     // Dienste
     public void mergeSort(int pArray[], int pN){
         array = new int[pN];
-        for(int i=0;i < pArray.length; i++)
+        for(int i=0;i < pArray.length; i++) //solange i kleiner ist als die Laenge von pArray wird i um 1 erhoeht sodass am Ende alle Stellen gleichgesetzt sind
         {
-            array[i] = pArray[i];
+            array[i] = pArray[i]; //Das Array dieser Klasse wird dem der anderen gleichgesetzt
         }
         meineUhr.starte();
         this.sort(array, 0 , pN-1);
@@ -28,27 +28,24 @@ public class MergeSort extends Sortieralgorithmen
     
     void merge(int arr[], int l, int m, int r) 
     { 
-        // Find sizes of two subarrays to be merged 
+        //Die Größen der Arrays speichern
         int n1 = m - l + 1; 
         int n2 = r - m; 
   
-        /* Create temp arrays */
+        /* Temporaere arrays erstellen */
         int L[] = new int [n1]; 
         int R[] = new int [n2]; 
   
-        /*Copy data to temp arrays*/
+        /* Array arr in 2 weitere aufteilen */
         for (int i=0; i<n1; ++i) 
             L[i] = arr[l + i]; 
         for (int j=0; j<n2; ++j) 
             R[j] = arr[m + 1+ j]; 
   
-  
-        /* Merge the temp arrays */
-  
-        // Initial indexes of first and second subarrays 
+        //Groeßen der beiden arrays 
         int i = 0, j = 0; 
   
-        // Initial index of merged subarry array 
+        /* Die Temporaeren arrays werden gemerged */
         int k = l; 
         while (i < n1 && j < n2) 
         { 
@@ -65,7 +62,7 @@ public class MergeSort extends Sortieralgorithmen
             k++; 
         } 
   
-        /* Copy remaining elements of L[] if any */
+        /* Restliche Elemente von L[] kopieren (Falls vorhanden) */
         while (i < n1) 
         { 
             arr[k] = L[i]; 
@@ -73,7 +70,7 @@ public class MergeSort extends Sortieralgorithmen
             k++; 
         } 
   
-        /* Copy remaining elements of R[] if any */
+        /* Restliche Elemente von R[] kopieren (Falls vorhanden) */
         while (j < n2) 
         { 
             arr[k] = R[j]; 
@@ -86,16 +83,16 @@ public class MergeSort extends Sortieralgorithmen
     { 
         if (l < r) 
         { 
-            // Find the middle point 
+            //Der Mittelpunkt wird berechnet
             int m = (l+r)/2; 
   
-            // Sort first and second halves 
+            //Beide Haelften werden sortiert
             sort(arr, l, m); 
             println();
             sort(arr , m+1, r); 
             println();
   
-            // Merge the sorted halves 
+            //Die Haelften werden gemerged
             merge(arr, l, m, r); 
             println();
         } 
@@ -110,13 +107,13 @@ public class MergeSort extends Sortieralgorithmen
             for(int i=0; i<9 ; i++) //i index
             {
                 this.deleteln();
-                f = f + t;   //die neuen Zahlen werden addiert
-                this.mergeSort(array, n);      //erneutes Sortieren
+                f = f + t;   //Die neuen Zahlen werden addiert
+                this.mergeSort(array, n); //Erneutes Sortieren
             }
             
-            t = f / 10; //Mittlere Wert wird berechnet
+            t = f / 10; //Mittlerer Wert wird berechnet
             f = 0;
-            return (t);  //mittlerer Wert wird zurück gegeben
+            return (t); //Mittlerer Wert wird zurück gegeben
 
         }
 }
