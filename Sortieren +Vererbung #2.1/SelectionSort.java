@@ -19,9 +19,9 @@ public class SelectionSort extends Sortieralgorithmen
     public void selectionSort(int pArray[], int pN) 
     { 
         array = new int[pN];
-        for(int i=0; i<pArray.length; i++) //solange i kleiner ist als die Laenge von pArray wird i um 1 erhoeht sodass am Ende alle Stellen gleichgesetzt sind
+        for(int i=0; i<pArray.length; i++) // Solange i kleiner ist als die Laenge von pArray wird i um 1 erhoeht sodass am Ende alle Stellen gleichgesetzt sind
         {
-            array[i] = pArray[i]; //Das Array dieser Klasse wird dem der anderen gleichgesetzt
+            array[i] = pArray[i]; // Das Array dieser Klasse wird dem der anderen gleichgesetzt
         }
         
         meineUhr.starte();
@@ -44,28 +44,28 @@ public class SelectionSort extends Sortieralgorithmen
             int temp = array[min_idx]; 
             array[min_idx] = array[i]; 
             array[i] = temp; 
-            println();  //ausgeben von aktuellem Array
+            println();  // Ausgeben von aktuellem Array
         } 
         meineUhr.stoppe();
         t = meineUhr.gestoppteZeit();
     }
     
-    /*Gibt Wert der gestoppten Zeit zurück
-         * als mittelwert von 10 sortierungen
-    */ 
+    /* Gibt Wert der gestoppten Zeit zurück
+       als mittelwert von 10 sortierungen */
+     
     public double time(int array[] ,int  n)
         {
              
-            for(int i=0; i<9 ; i++) //i index
+            for(int i=0; i<9 ; i++) // i index
             {
                 this.deleteln();
-                f = f + t;   //die neuen Zahlen werden addiert
-                this.selectionSort(array, n);      //erneutes Sortieren
+                f = f + t;   // Die neuen Zahlen werden addiert
+                this.selectionSort(array, n); // Erneutes Sortieren
             }
             
-            t = f / 10; //Mittlere Wert wird berechnet
+            t = f / 10; // Mittlerer Wert wird berechnet
             f = 0;
-            return (t);  //mittlerer Wert wird zurück gegeben
+            return (t); // Mittlerer Wert wird zurück gegeben
             
         }
     
