@@ -120,7 +120,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             bubble.bubbleSort(array, n);
             sorted = true;
-            zeit.setzeInhalt("BubbleSort:" + bubble.time());
+            zeit.setzeInhalt("BubbleSort:" + bubble.time(array, n));
         }
     }
 
@@ -137,7 +137,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             insertion.insertionSort(array, n);
             sorted = true;
-            zeit.setzeInhalt("InsertionSort:" + insertion.time());
+            zeit.setzeInhalt("InsertionSort:" + insertion.time(array, n));
         } 
     }
 
@@ -154,7 +154,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             selection.selectionSort(array, n);
             sorted = true;
-            zeit.setzeInhalt("SelectionSort:" + selection.time());
+            zeit.setzeInhalt("SelectionSort:" + selection.time(array, n));
         }
     }
 
@@ -171,7 +171,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             quick.quickSort(array, n);
             sorted = true;
-            zeit.setzeInhalt("QuickSort:" + quick.time());
+            zeit.setzeInhalt("QuickSort:" + quick.time(array, n));
         }
     }
 }
