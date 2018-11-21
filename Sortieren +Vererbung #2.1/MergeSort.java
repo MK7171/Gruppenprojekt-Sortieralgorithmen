@@ -32,11 +32,11 @@ public class MergeSort extends Sortieralgorithmen
         int n1 = m - l + 1; 
         int n2 = r - m; 
   
-        /* Temporaere arrays erstellen */
+        //Temporaere arrays erstellen
         int L[] = new int [n1]; 
         int R[] = new int [n2]; 
   
-        /* Array arr in 2 weitere aufteilen */
+        //Array arr in 2 weitere aufteilen
         for (int i=0; i<n1; ++i) 
             L[i] = arr[l + i]; 
         for (int j=0; j<n2; ++j) 
@@ -45,7 +45,7 @@ public class MergeSort extends Sortieralgorithmen
         //Groeßen der beiden arrays 
         int i = 0, j = 0; 
   
-        /* Die Temporaeren arrays werden gemerged */
+        //Die Temporaeren arrays werden gemerged
         int k = l; 
         while (i < n1 && j < n2) 
         { 
@@ -62,7 +62,7 @@ public class MergeSort extends Sortieralgorithmen
             k++; 
         } 
   
-        /* Restliche Elemente von L[] kopieren (Falls vorhanden) */
+        //Restliche Elemente von L[] kopieren (Falls vorhanden)
         while (i < n1) 
         { 
             arr[k] = L[i]; 
@@ -70,7 +70,7 @@ public class MergeSort extends Sortieralgorithmen
             k++; 
         } 
   
-        /* Restliche Elemente von R[] kopieren (Falls vorhanden) */
+        //Restliche Elemente von R[] kopieren (Falls vorhanden)
         while (j < n2) 
         { 
             arr[k] = R[j]; 
@@ -98,16 +98,16 @@ public class MergeSort extends Sortieralgorithmen
         } 
     } 
     
-     /*Gibt Wert der gestoppten Zeit zurück
-    * als mittelwert von 10 sortierungen
-    */ 
+    /* Gibt Wert der gestoppten Zeit zurück
+       als mittelwert von 10 sortierungen */
+     
     public double time(int array[] ,int  n)
         {
              
             for(int i=0; i<9 ; i++) //i index
             {
                 this.deleteln();
-                f = f + t;   //Die neuen Zahlen werden addiert
+                f = f + t; //Die neuen Zahlen werden addiert
                 this.mergeSort(array, n); //Erneutes Sortieren
             }
             
