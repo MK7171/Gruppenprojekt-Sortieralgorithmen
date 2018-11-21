@@ -116,6 +116,7 @@ public class QuickSort extends Sortieralgorithmen
              
             for(int i=0; i<9 ; i++) //i index
             {
+                this.deleteln();
                 f = f + t;   //die neuen Zahlen werden addiert
                 this.quickSort(array, n);      //erneutes Sortieren
             }
