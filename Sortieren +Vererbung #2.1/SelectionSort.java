@@ -58,6 +58,7 @@ public class SelectionSort extends Sortieralgorithmen
              
             for(int i=0; i<9 ; i++) //i index
             {
+                this.deleteln();
                 f = f + t;   //die neuen Zahlen werden addiert
                 this.selectionSort(array, n);      //erneutes Sortieren
             }
