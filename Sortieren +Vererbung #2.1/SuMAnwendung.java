@@ -14,6 +14,7 @@ public class SuMAnwendung extends EBAnwendung
     InsertionSort insertion; //Deklarierung der Klasse für Insertion Sort
     SelectionSort selection; //Deklarierung der Klasse für Selection Sort
     QuickSort quick; //Deklarierung der Klasse für Quick Sort
+    MergeSort merge; //Deklarierung der Klasse für Merge Sort
 
     Knopf bFillArray; //Knopf, um das Array zu füllen
 
@@ -23,6 +24,7 @@ public class SuMAnwendung extends EBAnwendung
     Knopf bInsertion; //Knopf, um das Array mit Insertion Sort zu sortieren
     Knopf bSelection; //Knopf, um das Array mit Selection Sort zu sortieren
     Knopf bQuick; //Knopf, um das Array mit Bubble Sort zu sortieren
+    Knopf bMerge; //Knopf, um das Array mit Merge Sort zu sortieren
 
     Etikett zeit; //Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
     Etikett status; //Etikett, dass einen Statusbericht anzeigt (Bsw. "Berechne" oder "fertig")
@@ -43,6 +45,7 @@ public class SuMAnwendung extends EBAnwendung
         insertion = new InsertionSort();
         selection = new SelectionSort();
         quick = new QuickSort();
+        merge = new MergeSort();
 
         bFillArray = new Knopf(10,10,75,25,"Fill Array","bFillArrayGeklickt");
 
@@ -53,6 +56,7 @@ public class SuMAnwendung extends EBAnwendung
         bInsertion = new Knopf(300,10,100,25,"Insertion Sort","bInsertionGeklickt");
         bSelection = new Knopf(400,10,100,25,"Selection Sort","bSelectionGeklickt");
         bQuick = new Knopf(500,10,100,25,"Quick Sort","bQuickGeklickt");
+        bMerge = new Knopf(600,10,100,25,"Merge Sort","bMergeGeklickt");
 
         zeit = new Etikett(800,20,100,30,"Gestoppte Zeit");
         status = new Etikett(800,3,100,30,"Warte auf Start");
@@ -85,6 +89,7 @@ public class SuMAnwendung extends EBAnwendung
             insertion.deleteln();
             selection.deleteln();
             quick.deleteln();
+            merge.deleteln();
         } //->damit die Sortierschritte auch gelöscht werden
         sorted = false;
     }
@@ -123,6 +128,7 @@ public class SuMAnwendung extends EBAnwendung
             insertion.deleteln();
             selection.deleteln();
             quick.deleteln();
+            merge.deleteln();
         }
         if(test.inhaltAlsText()!="") //->damit der Knopf erst verwendet werden kann, wenn es auch was zum Sortieren gibt
         {
@@ -145,6 +151,7 @@ public class SuMAnwendung extends EBAnwendung
             insertion.deleteln();
             selection.deleteln();
             quick.deleteln();
+            merge.deleteln();
         }
         if(test.inhaltAlsText()!="")
         {
@@ -167,6 +174,7 @@ public class SuMAnwendung extends EBAnwendung
             insertion.deleteln();
             selection.deleteln();
             quick.deleteln();
+            merge.deleteln();
         }
         if(test.inhaltAlsText()!="")
         {
@@ -189,6 +197,7 @@ public class SuMAnwendung extends EBAnwendung
             insertion.deleteln();
             selection.deleteln();
             quick.deleteln();
+            merge.deleteln();
         }
         if(test.inhaltAlsText()!="")
         {
@@ -197,6 +206,23 @@ public class SuMAnwendung extends EBAnwendung
             status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
+        }
+    }
+    
+    public void bMergeGeklickt()
+    {
+        if(sorted)
+        {
+            bubble.deleteln();
+            insertion.deleteln();
+            selection.deleteln();
+            quick.deleteln();
+        }
+        if(test.inhaltAlsText()!="")
+        {
+            merge.mergeSort(array, n);
+            sorted = true;
+            zeit.setzeInhalt("MergeSort:" + quick.time());
         }
     }
 }
