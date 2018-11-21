@@ -116,6 +116,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10);           //status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
+        zeit.setzeInhalt("");
         if(sorted)
         {
             bubble.deleteln();
@@ -137,6 +138,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10);       //status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
+        zeit.setzeInhalt("");
         if(sorted)
         {
             bubble.deleteln();
@@ -158,6 +160,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10);       //status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
+        zeit.setzeInhalt("");
         if(sorted)
         {
             bubble.deleteln();
@@ -179,6 +182,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10);       //status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
+        zeit.setzeInhalt("");
         if(sorted)
         {
             bubble.deleteln();
@@ -189,7 +193,7 @@ public class SuMAnwendung extends EBAnwendung
         if(test.inhaltAlsText()!="")
         {
             quick.quickSort(array, n);
-            zeit.setzeInhalt("QuickSort:" + quick.time(array, n));
+            zeit.setzeInhalt("QuickSort:" + quick.time(array, n));      //ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
             status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
