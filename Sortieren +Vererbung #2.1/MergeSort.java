@@ -100,4 +100,23 @@ public class MergeSort extends Sortieralgorithmen
             println();
         } 
     } 
+    
+     /*Gibt Wert der gestoppten Zeit zurück
+    * als mittelwert von 10 sortierungen
+    */ 
+    public double time(int array[] ,int  n)
+        {
+             
+            for(int i=0; i<9 ; i++) //i index
+            {
+                this.deleteln();
+                f = f + t;   //die neuen Zahlen werden addiert
+                this.mergeSort(array, n);      //erneutes Sortieren
+            }
+            
+            t = f / 10; //Mittlere Wert wird berechnet
+            f = 0;
+            return (t);  //mittlerer Wert wird zurück gegeben
+
+        }
 }
