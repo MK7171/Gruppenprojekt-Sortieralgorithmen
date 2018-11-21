@@ -222,7 +222,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             merge.mergeSort(array, n);
             sorted = true;
-            zeit.setzeInhalt("MergeSort:" + quick.time());
+            zeit.setzeInhalt("MergeSort:" + merge.time());
         }
     }
 }
