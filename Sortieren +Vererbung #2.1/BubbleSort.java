@@ -37,7 +37,7 @@ public class BubbleSort extends Sortieralgorithmen
                     int temporary = array[i];
                     array[i] = array[i+1];
                     array[i+1] = temporary;
-                    println(); //ausgeben von aktuellem Array
+                    println(); //Ausgeben von aktuellem Array
                     swapped = true;
                 }
             }
@@ -56,11 +56,11 @@ public class BubbleSort extends Sortieralgorithmen
             for(int i=0; i<9 ; i++) //i index
             {
                 this.deleteln();
-                f = f + t;   //die neuen Zahlen werden addiert
+                f = f + t; //die neuen Zahlen werden addiert
                 this.bubbleSort(array, n); //erneutes Sortieren
             }
             
-            t = f / 10; //Mittlere Wert wird berechnet
+            t = f / 10; //Mittlerer Wert wird berechnet
             f = 0;
             return (t); //Mittlerer Wert wird zurück gegeben
             
