@@ -23,13 +23,22 @@ public class InsertionSort extends Sortieralgorithmen
         {
             array[i] = pArray[i]; //Das Array dieser Klasse wird dem der anderen gleichgesetzt
         }
-        meineUhr.starte();
-        for (int i=1; i<pN; ++i) 
+        meineUhr.starte();          //startet die Stoppuhr
+        /*Die For-Schleife läuft einmal weniger durch als das Array lang ist. Dies kommt daher, dass jede Position genau 
+        einmal mit den davor liegenden verglichen wird außer die erste. Bei einem Array der länge 28 läuft sie also 9 mal durch
+        */
+        for (int i=1; i<pN; i++) 
         { 
             int key = array[i]; 
             int j = i-1; 
-
-            while (j>=0 && array[j] > key) 
+                /*Vergleicht zwei positionen des Arrays miteinander. Bsw.Position 5 mit 4.
+                Also zuerst immer eine mit der davor liegenden. Wenn die Davorliegende größer ist
+                 das Vergleichsobjekt, dann wird das nächste verglichen (in diesem Fall die Position 3).
+                 Wenn diese nun auch größer ist wird wieder die Position davor genommen. Das geschiet bis das 
+                 Vergleichsobjekt kleiner ist als die Position an der man gerade ist oder man mit der 1ten Position 
+                 des Arrays verglichen hat. Dann wird das Vergleichsobjekt hinter das kleinere gelegt und alle anderen rücken auf
+                */
+            while (j>=0 && array[j] > key)  
             { 
                 array[j+1] = array[j]; 
                 j = j-1; 
@@ -37,7 +46,7 @@ public class InsertionSort extends Sortieralgorithmen
             array[j+1] = key; 
             println(); //ausgeben von aktuellem Array
         } 
-        meineUhr.stoppe();
+        meineUhr.stoppe();      //stoppt die Stoppuhr
         t = meineUhr.gestoppteZeit();
     }
     
@@ -50,6 +59,7 @@ public class InsertionSort extends Sortieralgorithmen
              
             for(int i=0; i<9 ; i++) //i index
             {
+                this.deleteln();
                 f = f + t;   //die neuen Zahlen werden addiert
                 this.insertionSort(array, n);      //erneutes Sortieren
             }
