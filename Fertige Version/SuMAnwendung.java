@@ -192,7 +192,7 @@ public class SuMAnwendung extends EBAnwendung
             status.setzeInhalt("FERTIG");
             maxSeite=1;
             getMaxSeite();
-            System.out.println(maxSeite+" Seite(n) (InsertionSort)");
+            //System.out.println(maxSeite+" Seite(n) (InsertionSort)");
             first();
             sorted = true;
         } 
@@ -225,7 +225,7 @@ public class SuMAnwendung extends EBAnwendung
             status.setzeInhalt("FERTIG");
             maxSeite=1;
             getMaxSeite();
-            System.out.println(maxSeite+" Seite(n) (SelectionSort)");
+            //System.out.println(maxSeite+" Seite(n) (SelectionSort)");
             first();
             sorted = true;
         }
@@ -258,7 +258,7 @@ public class SuMAnwendung extends EBAnwendung
             status.setzeInhalt("FERTIG");
             maxSeite=1;
             getMaxSeite();
-            System.out.println(maxSeite+" Seite(n) (QuickSort)");
+            //System.out.println(maxSeite+" Seite(n) (QuickSort)");
             first();
             sorted = true;
         }
