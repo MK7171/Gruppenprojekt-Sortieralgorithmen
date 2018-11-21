@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=MergeSort
+comment0.text=\r\n\ @author\ \r\n\ @version\ \r\n
+comment1.params=
+comment1.target=MergeSort()
+comment2.params=pArray\ pN
+comment2.target=void\ mergeSort(int[],\ int)
+comment3.params=arr\ l\ m\ r
+comment3.target=void\ merge(int[],\ int,\ int,\ int)
+comment4.params=arr\ l\ r
+comment4.target=void\ sort(int[],\ int,\ int)
+numComments=5
