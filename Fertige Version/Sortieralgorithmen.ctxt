@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Sortieralgorithmen()
+comment1.params=
+comment1.target=void\ save()
+comment2.params=
+comment2.target=void\ resetS()
+comment3.params=
+comment3.target=void\ resetE()
+comment4.params=
+comment4.target=double\ time()
+numComments=5

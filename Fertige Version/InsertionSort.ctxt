@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=InsertionSort()
+comment1.params=pArray\ pN
+comment1.target=void\ insertionSort(int[],\ int)
+comment2.params=array\ n
+comment2.target=double\ time(int[],\ int)
+comment2.text=\ Gibt\ Wert\ der\ gestoppten\ Zeit\ zur\u00FCck\r\nals\ mittelwert\ von\ 10\ sortierungen
+numComments=3
