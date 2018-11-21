@@ -1,0 +1,13 @@
+<h1 style="text-align: center;"><span style="text-decoration: underline;"><strong>Dokumentation:</strong></span><strong> InsertionSort</strong></h1>
+<p style="text-align: justify;">InsertionSort ist ein einfacher Sortieralgorithmus. Der Code ist kurz und &uuml;bersichtlich und das Prinzip leicht verst&auml;ndich.</p>
+<p><img src="insertionSort.png" alt="Die methode in der insertion Sort den Array sortiert" width="1258" height="456" /></p>
+<p style="text-align: justify;">&nbsp;Im ersten Teil dieser Methode wird vermittelt zwischen der SuMAnwendung() und InsertionSort(). Hier wird ein "Vermittler Array" gleich dem Original Array gesetzt. So &auml;ndert das Programm nichts am Original Array, sodass auf diesen weiterhin zugegriffen werden kann.</p>
+<p style="text-align: justify;">Dann wird noch die Stoppuhr gestartet, bevor dann InsertionSort beginnt zu arbeiten:</p>
+<p style="text-align: justify;">InsertionSort vergleicht zwei Positionen des Arrays miteinander. Bsw. Position 5 mit 4. Also zuerst immer eine mit der davor liegenden. Wenn die davor liegende gr&ouml;&szlig;er ist als das Vergleichsobjekt, dann wird das n&auml;chste verglichen (in diesem Fall die Position 3). Wenn diese nun auch gr&ouml;&szlig;er ist, wird wieder die Position davor genommen. Das geschieht, bis das Vergleichsobjekt kleiner ist, als die Position an der man gerade ist oder man mit der 1ten Position des Arrays angekommen ist. Dann wird das Vergleichsobjekt hinter das kleinere gelegt und alle anderen r&uuml;cken auf.</p>
+<p style="text-align: justify;">Das Ganze f&auml;ngt dann durch eine For-Schleife wieder von vorne an. Also in diesem Beispiel wird nun Position 6 mit der/denen davor verglichen.</p>
+<p style="text-align: justify;">Die For-Schleife l&auml;uft exakt einmal weniger, als das Array lang ist, dann ist mit insertionSort schon fertig sortiert. Das liegt daran, dass jede Stelle des Arrays nur einmal mit den davor liegenden verglichen wird und bei der 2ten Stelle gestartet wird. Bei einem Array der L&auml;nge 10 ist also schon nach 9 Schritten Schluss.</p>
+<p><img src="time.png" alt="die Methode f&uuml;r die Zeitberechnung" width="696" height="396" /></p>
+<p>Die Methode der Zeitberechnung wird in der Dokumentation zur Zeitberechnung genauer erkl&auml;rt.</p>
+<p>&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: right;">InsertionSort von Dagh Zeppenfeld</p>
