@@ -123,7 +123,7 @@ public class QuickSort extends Sortieralgorithmen
             t = f / 10; //Mittlere Wert wird berechnet
             f = 0;
             return (t);  //mittlerer Wert wird zurück gegeben
-
+        }
 
 
 }
