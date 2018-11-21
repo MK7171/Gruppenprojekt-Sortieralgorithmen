@@ -60,6 +60,7 @@ public class InsertionSort extends Sortieralgorithmen
              
             for(int i=0; i<9 ; i++) // i index
             {
+                this.resetS();
                 f = f + t; // Die neuen Zahlen werden addiert
                 this.insertionSort(array, n); // Erneutes Sortieren
             }
