@@ -8,32 +8,32 @@ import sum.werkzeuge.*;
 public class SuMAnwendung extends EBAnwendung
 {
     // Bezugsobjekte
-    int [] array; //Array mit Zahlen
+    int [] array; // Array mit Zahlen
 
-    BubbleSort bubble; //Deklarierung der Klasse für Bubble Sort 
-    InsertionSort insertion; //Deklarierung der Klasse für Insertion Sort
-    SelectionSort selection; //Deklarierung der Klasse für Selection Sort
-    QuickSort quick; //Deklarierung der Klasse für Quick Sort
-    MergeSort merge; //Deklarierung der Klasse für Merge Sort
+    BubbleSort bubble; // Deklarierung der Klasse für Bubble Sort 
+    InsertionSort insertion; // Deklarierung der Klasse für Insertion Sort
+    SelectionSort selection; // Deklarierung der Klasse für Selection Sort
+    QuickSort quick; // Deklarierung der Klasse für Quick Sort
+    MergeSort merge; // Deklarierung der Klasse für Merge Sort
 
-    Knopf bFillArray; //Knopf, um das Array zu füllen
+    Knopf bFillArray; // Knopf, um das Array zu füllen
 
-    Auswahl aLaenge; //Dropdown zur Auswahl der Arraylänge
+    Auswahl aLaenge; // Dropdown zur Auswahl der Arraylänge
 
-    Knopf bBubble; //Knopf, um das Array mit Bubble Sort zu sortieren
-    Knopf bInsertion; //Knopf, um das Array mit Insertion Sort zu sortieren
-    Knopf bSelection; //Knopf, um das Array mit Selection Sort zu sortieren
-    Knopf bQuick; //Knopf, um das Array mit Bubble Sort zu sortieren
-    Knopf bMerge; //Knopf, um das Array mit Merge Sort zu sortieren
+    Knopf bBubble; // Knopf, um das Array mit Bubble Sort zu sortieren
+    Knopf bInsertion; // Knopf, um das Array mit Insertion Sort zu sortieren
+    Knopf bSelection; // Knopf, um das Array mit Selection Sort zu sortieren
+    Knopf bQuick; // Knopf, um das Array mit Bubble Sort zu sortieren
+    Knopf bMerge; // Knopf, um das Array mit Merge Sort zu sortieren
 
-    Etikett zeit; //Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
-    Etikett status; //Etikett, dass einen Statusbericht anzeigt (Bsw. "Berechne" oder "fertig")
-    Etikett test; //Etikett, das den Ursprungszustand des Arrays enthält
+    Etikett zeit; // Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
+    Etikett status; // Etikett, dass einen Statusbericht anzeigt (Bsw. "Berechne" oder "fertig")
+    Etikett test; // Etikett, das den Ursprungszustand des Arrays enthält
 
-    Rechner r; //Für die Zufallszahlen, die das Array füllen werden
+    Rechner r; // Für die Zufallszahlen, die das Array füllen werden
 
     // Attribute
-    int n; //Anzahl der Zahlen im Array
+    int n; // Anzahl der Zahlen im Array
     boolean sorted = false; 
 
     // Konstruktor
@@ -79,7 +79,7 @@ public class SuMAnwendung extends EBAnwendung
     public void bFillArrayGeklickt()
     {
         fillArray();
-        status.setzeSchriftFarbe(1);        //status zeigt hier in der Farbe Blau  an, das die Sortierung begonnen werden kann
+        status.setzeSchriftFarbe(1); // Status zeigt hier in der Farbe Blau  an, das die Sortierung begonnen werden kann
         status.setzeInhalt("Warte auf Start");
         deleteNumbers();
         printNumbers();
@@ -90,14 +90,14 @@ public class SuMAnwendung extends EBAnwendung
             selection.deleteln();
             quick.deleteln();
             merge.deleteln();
-        } //->damit die Sortierschritte auch gelöscht werden
+        } // Damit die Sortierschritte auch gelöscht werden
         sorted = false;
     }
 
     public void fillArray()
     {
         n = aLaenge.index()+2;
-        array = new int[n]; //Array wird mit n Plätzen initialisiert
+        array = new int[n]; // Array wird mit n Plätzen initialisiert
         for(int i=0; i<array.length; i++)
         {array[i] = r.ganzeZufallszahl(1,5);}
     }
@@ -119,7 +119,7 @@ public class SuMAnwendung extends EBAnwendung
 
     public void bBubbleGeklickt()
     {
-        status.setzeSchriftFarbe(10);           //status zeigt hier in der Farbe Rot an, das nun berechnet wird
+        status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
         zeit.setzeInhalt("");
         if(sorted)
@@ -130,11 +130,11 @@ public class SuMAnwendung extends EBAnwendung
             quick.deleteln();
             merge.deleteln();
         }
-        if(test.inhaltAlsText()!="") //->damit der Knopf erst verwendet werden kann, wenn es auch was zum Sortieren gibt
+        if(test.inhaltAlsText()!="") // Damit der Knopf erst verwendet werden kann, wenn es auch was zum Sortieren gibt
         {
             bubble.bubbleSort(array, n);
             zeit.setzeInhalt("BubbleSort:" + bubble.time(array, n) + "ms");
-            status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
+            status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
         }
@@ -142,7 +142,7 @@ public class SuMAnwendung extends EBAnwendung
 
     public void bInsertionGeklickt()
     {
-        status.setzeSchriftFarbe(10);       //status zeigt hier in der Farbe Rot an, das nun berechnet wird
+        status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
         zeit.setzeInhalt("");
         if(sorted)
@@ -157,7 +157,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             insertion.insertionSort(array, n);
             zeit.setzeInhalt("InsertionSort:" + insertion.time(array, n) + "ms");
-            status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
+            status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
         } 
@@ -165,7 +165,7 @@ public class SuMAnwendung extends EBAnwendung
 
     public void bSelectionGeklickt()
     {
-        status.setzeSchriftFarbe(10);       //status zeigt hier in der Farbe Rot an, das nun berechnet wird
+        status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
         zeit.setzeInhalt("");
         if(sorted)
@@ -180,7 +180,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             selection.selectionSort(array, n);
             zeit.setzeInhalt("SelectionSort:" + selection.time(array, n) + "ms");
-            status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
+            status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
         }
@@ -188,7 +188,7 @@ public class SuMAnwendung extends EBAnwendung
 
     public void bQuickGeklickt()
     {
-        status.setzeSchriftFarbe(10);       //status zeigt hier in der Farbe Rot an, das nun berechnet wird
+        status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
         zeit.setzeInhalt("");
         if(sorted)
@@ -202,8 +202,8 @@ public class SuMAnwendung extends EBAnwendung
         if(test.inhaltAlsText()!="")
         {
             quick.quickSort(array, n);
-            zeit.setzeInhalt("QuickSort:" + quick.time(array, n) + "ms");      //ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
-            status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
+            zeit.setzeInhalt("QuickSort:" + quick.time(array, n) + "ms"); // Ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
+            status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
         }
