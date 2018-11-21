@@ -1,0 +1,25 @@
+<h1 style="text-align: center;"><strong><span style="text-decoration: underline;">Dokumentation:</span> QuickSort</strong></h1>
+<p>&nbsp;QuickSort funktioniert &uuml;ber das Aufteilen des Ursprungs-Arrays in einen mit den Gro&szlig;en Zahlen und in einen mit den kleinen. Dies geschieht Rekursiv bis alles Sortiert ist.</p>
+<p>Zur Sortierung in klein und gro&szlig; nutzt QuickSort ein Pivot-Element. Das Hei&szlig;t ein Element mit dem alle anderen Elemente verglichen werden ob diese nun gr&ouml;&szlig;er oder kleiner sind. Bei gleich gro&szlig;en Elementen ist es egal in welches Array sie gepackt werden weshalb sie in das Array mit den gr&ouml;&szlig;eren gepackt werden.</p>
+<p>&nbsp;</p>
+<p>Von Quicksort gibt es verschiedene Varianten bei der auswahl von Pivot Elementen:</p>
+<ol>
+<li>Es wird immer das erste Element des Arrays genommen</li>
+<li>Es wird immer das letzte Element des Arrays genommen</li>
+<li>Es wird ein zuf&auml;lliges Element aus dem Array genommen</li>
+<li>Es wird zuerstein mittleres Element berechnet, welches dann als Pivot genommen wird. So hat man eine m&ouml;glicht gleichm&auml;&szlig;ige Aufteilung</li>
+</ol>
+<p>Die ersten 3 M&ouml;glichkeiten &auml;hneln sich insofern, dass sie alle mit hoher Wahrscheinlichkeit nicht ein relativ mittiges (von der Zahlenh&ouml;he) Element als Pivot ausw&auml;hlen.</p>
+<p>In unerem Programm benutzen wir die M&ouml;glichkeit 2</p>
+<p>&nbsp;</p>
+<p>&nbsp;<img src="quickSort.png" alt="Gleichsetzen der Arrays" width="1279" height="279" /></p>
+<p>Diese Klasse ist ein "Vermittler" zwischen der SuMAnwendung() und dem etwas komplexerem QuickSort. Hier ermittelt das Programm die Array l&auml;nge welche sp&auml;ter noch gebraucht wird (als high bzw pivot). Au&szlig;erdem wird ein "Vermittler Array" gleich dem Original Array gesetzt. So &auml;ndert das Programm nichts am Original Array, sodass auf diesen weiterhin zugegriffen werden kann.</p>
+<p><img src="sort.png" alt="Die Organisationsmethode: sort" width="580" height="380" /></p>
+<p>Die Hauptbegiffe die von QuickSort() im folgenden genutzt werden<br /> array[] --&gt; der array der im fogenden sortiert werden soll, <br /> low --&gt; Start Index (in diesem fall einfach 0), <br /> high --&gt; Der letzte Index im Array</p>
+<p>In dieser Methode wird rekursiv die Methode partition() aufgerufen. In dieser l&auml;uft dann das eigentliche Sortieren ab.</p>
+<p><img src="partition.png" alt="Die aufteileung der gr&ouml;&szlig;eren und kleineren Elemante" width="1280" height="550" /></p>
+<p style="text-align: center;">In dieser Methode wird das Letzte Element (high bzw. Pivot) an seine Korrekte Stelle gelegt. Daraufhin werden alle Elemente welche einen gr&ouml;&szlig;eren Wert haben als das Pivot, auf dessen recht Seite verschoben und alle Elemente welche einen kleineren Wert haben kommen auf die linke Seite.<br />&nbsp; 1,5,1,7,4,8,3<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; high bzw. Pivot<br />&nbsp; <br />&nbsp; <br />&nbsp; <br />&nbsp;<br />&nbsp; nach der Methode: 1,1,3,8,4,7,5<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ^<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; |<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; high bzw. Pivot</p>
+<p style="text-align: left;"><img src="time.png" alt="Zeitberechnung" width="1283" height="294" /></p>
+<p style="text-align: left;">&nbsp;Die Methode time ist in der Dokumentation &uuml;ber die Zeitberechnung genauer Beschrieben.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: right;">QuickSort von Dagh Zeppenfeld</p>
