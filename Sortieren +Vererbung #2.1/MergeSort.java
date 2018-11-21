@@ -36,7 +36,7 @@ public class MergeSort extends Sortieralgorithmen
         int L[] = new int [n1]; 
         int R[] = new int [n2]; 
   
-        // Array arr in 2 weitere aufteilen
+        // Array zusammenfügen
         for (int i=0; i<n1; ++i) 
             L[i] = arr[l + i]; 
         for (int j=0; j<n2; ++j) 
