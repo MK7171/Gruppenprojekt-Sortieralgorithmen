@@ -27,7 +27,11 @@ public class SuMAnwendung extends EBAnwendung
     Knopf bQuick; // Knopf, um das Array mit Bubble Sort zu sortieren
     Knopf bMerge; // Knopf, um das Array mit Merge Sort zu sortieren
 
-    Etikett zeit; // Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
+    Etikett zeit1; // Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
+    Etikett zeit2; // Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
+    Etikett zeit3; // Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
+    Etikett zeit4; // Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
+    Etikett zeit5; // Etioppte Zeitktt, dass die beim Sortieren gestoppte Zeit angibt
     Etikett status; // Etikett, dass einen Statusbericht anzeigt (Bsw. "Berechne" oder "fertig")
     Etikett test; // Etikett, das den Ursprungszustand des Arrays enthält
 
@@ -67,7 +71,11 @@ public class SuMAnwendung extends EBAnwendung
         bQuick = new Knopf(500,10,100,25,"Quick Sort","bQuickGeklickt");
         bMerge = new Knopf(600,10,100,25,"Merge Sort","bMergeGeklickt");
 
-        zeit = new Etikett(800,20,100,30,"Gestoppte Zeit");
+        zeit1 = new Etikett(1200,20,100,30,"");
+        zeit2 = new Etikett(1200,35,100,30,"");
+        zeit3 = new Etikett(1200,50,100,30,"");
+        zeit4 = new Etikett(1200,65,100,30,"");
+        zeit5 = new Etikett(1200,80,100,30,"");
         status = new Etikett(800,3,100,30,"Warte auf Start");
         status.setzeSchriftFarbe(1);
         test = new Etikett(10,50,1200,25,"");
@@ -90,7 +98,11 @@ public class SuMAnwendung extends EBAnwendung
         fillArray();
         status.setzeSchriftFarbe(1); // Status zeigt hier in der Farbe Blau  an, das die Sortierung begonnen werden kann
         status.setzeInhalt("Warte auf Start");
-        zeit.setzeInhalt("Gestoppte Zeit");
+        zeit1.setzeInhalt("");
+        zeit2.setzeInhalt("");
+        zeit3.setzeInhalt("");
+        zeit4.setzeInhalt("");
+        zeit5.setzeInhalt("");
         deleteNumbers();
         printNumbers();
         if(sorted)
@@ -136,7 +148,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
-        zeit.setzeInhalt("");
+        zeit1.setzeInhalt("");
         if(sorted)
         {
             bubble.resetE();
@@ -154,7 +166,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             lastUsed = "bubble";
             bubble.bubbleSort(array, n);
-            zeit.setzeInhalt("BubbleSort:"+bubble.time(array, n)+"ms");
+            zeit1.setzeInhalt("BubbleSort:"+bubble.time(array, n)+"ms");
             status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             maxSeite=1;
@@ -169,7 +181,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
-        zeit.setzeInhalt("");
+        zeit2.setzeInhalt("");
         if(sorted)
         {
             bubble.resetE();
@@ -187,7 +199,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             lastUsed = "insertion";
             insertion.insertionSort(array, n);
-            zeit.setzeInhalt("InsertionSort:" + insertion.time(array, n) + "ms");
+            zeit2.setzeInhalt("InsertionSort:" + insertion.time(array, n) + "ms");
             status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             maxSeite=1;
@@ -202,7 +214,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
-        zeit.setzeInhalt("");
+        zeit3.setzeInhalt("");
         if(sorted)
         {
             bubble.resetE();
@@ -220,7 +232,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             lastUsed = "selection";
             selection.selectionSort(array, n);
-            zeit.setzeInhalt("SelectionSort:" + selection.time(array, n) + "ms");
+            zeit3.setzeInhalt("SelectionSort:" + selection.time(array, n) + "ms");
             status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             maxSeite=1;
@@ -235,7 +247,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
-        zeit.setzeInhalt("");
+        zeit4.setzeInhalt("");
         if(sorted)
         {
             bubble.resetE();
@@ -253,7 +265,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             lastUsed = "quick";
             quick.quickSort(array, n);
-            zeit.setzeInhalt("QuickSort:" + quick.time(array, n) + "ms"); // Ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
+            zeit4.setzeInhalt("QuickSort:" + quick.time(array, n) + "ms"); // Ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
             status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             maxSeite=1;
@@ -268,7 +280,7 @@ public class SuMAnwendung extends EBAnwendung
     {
         status.setzeSchriftFarbe(10); // Status zeigt hier in der Farbe Rot an, das nun berechnet wird
         status.setzeInhalt("Berechne...");
-        zeit.setzeInhalt("");
+        zeit5.setzeInhalt("");
         if(sorted)
         {
             bubble.resetE();
@@ -286,7 +298,7 @@ public class SuMAnwendung extends EBAnwendung
         {
             lastUsed = "merge";
             merge.mergeSort(array, n);
-            zeit.setzeInhalt("MergeSort:" + merge.time(array, n) + "ms"); // Ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
+            zeit5.setzeInhalt("MergeSort:" + merge.time(array, n) + "ms"); // Ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
             status.setzeSchriftFarbe(5); // Status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             maxSeite=1;
