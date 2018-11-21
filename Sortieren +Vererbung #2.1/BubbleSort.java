@@ -47,9 +47,9 @@ public class BubbleSort extends Sortieralgorithmen
         meineUhr.stoppe();
         t = meineUhr.gestoppteZeit();
     }
-        /*Gibt Wert der gestoppten Zeit zurück
-         * als mittelwert von 10 sortierungen
-    */ 
+    /* Gibt Wert der gestoppten Zeit zurück
+      als mittelwert von 10 sortierungen */
+     
     public double time(int array[] ,int  n)
         {
              
@@ -57,12 +57,12 @@ public class BubbleSort extends Sortieralgorithmen
             {
                 this.deleteln();
                 f = f + t;   //die neuen Zahlen werden addiert
-                this.bubbleSort(array, n);      //erneutes Sortieren
+                this.bubbleSort(array, n); //erneutes Sortieren
             }
             
             t = f / 10; //Mittlere Wert wird berechnet
             f = 0;
-            return (t);  //mittlerer Wert wird zurück gegeben
+            return (t); //Mittlerer Wert wird zurück gegeben
             
         }
 } 
