@@ -1,0 +1,19 @@
+<div style="font-family: Arial; font-size: 22pt;"><strong>Dokumentation: MergeSort</strong></div><br />
+<div style="font-family: Arial; font-size: 12pt;"><strong>Die Funktion: mergeSort(int pArray, int Pn)</strong></div><br />
+<img src="img/mergeSort().png" alt="Die Funktion mergeSort()" width="980" height="221" /><br /><br />
+<div style="font-family: Arial; font-size: 10pt;">Diese Funktion wird von SuMAnwendung ausgeführt, wenn der Knopf "MergeSort" betätigt wird. In den ersten<br />paar Zeilen
+wird durch eine for Schleife bewirkt, dass das Array der Klasse SuMAnwendung, also die Zufälligen<br />Zahlen dem zuvor erstellten Array gleichgesetzt werden und man
+es für die Sortierung benutzen kann. Danach<br />wird die Uhr gestartet und der Befehl sort() löst eine Kettenreaktion aus und sortiert das Array. Dann wird die Zeit<br />
+wieder angehalten und auf dem Bildschirm angezeigt.</div><br />
+<div style="font-family: Arial; font-size: 12pt;"><strong>Die Funktion: merge(int arr[], int l, int m, int r)</strong></div><br />
+<img src="img/merge().png" alt="Die Funktion merge(int arr[], int l, int m, int r)" width="980" height="1040" /><br /><br />
+<div style="font-family: Arial; font-size: 10pt;">Diese Funktion wird aufgerufen, nachdem die sort() Funktion ausgeführt wurde. Sie dient dazu, die aufgeteilten<br />Arrays wieder zusammen zu fuegen.</div><br />
+<div style="font-family: Arial; font-size: 12pt;"><strong>Die Funktion: sort(int arr[], int l, int r)</strong></div><br />
+<img src="img/sort().png" alt="Die Funktion sort(int arr[], int l, int r)" width="980" height="361" /><br /><br />
+<div style="font-family: Arial; font-size: 10pt;">In der Funktion sort() wird erst ein Mittelwert berechnet. Danach wird mit Hilfe eines Rekursiven Aufrufs das Array<br />immer weiter aufgeteilt und sortiert. 
+Am Ende dieses Prozesses wird alles wieder zusammen gemerged mit Hilfe von<br/>merge(). Außerdem wird nach jedem sortier-Schritt das Array geprinted und der genaue Prozess offen gelegt.</div><br />
+<div style="font-family: Arial; font-size: 12pt;"><strong>Die Funktion: time(int array[] ,int  n)</strong></div><br />
+<img src="img/time().png" alt="Die Funktion time(int array[] ,int  n)" width="980" height="300" /><br /><br />
+<div style="font-family: Arial; font-size: 10pt;">Die Funktion time() berechnet durch mehrfaches hintereinander-ausführen und Zeit stoppen einen Mittelwert, der<br />benötigten Zeit des Algorithmus. 
+Es ist nochmal deutlich genauer, als nur einmalig die Zeit zu stoppen.</div><br /><br/><br/>
+<div style="font-family: Arial; font-size: 10pt;">by Paul Helmes</div>
