@@ -81,7 +81,7 @@ public class QuickSort extends Sortieralgorithmen
         array[i+1] = array[high]; 
         array[high] = temp; 
   
-        println(); //Ausgeben von aktuellem Array
+        println(); // Ausgeben von aktuellem Array
                 
         return i+1; 
     } 
@@ -116,12 +116,12 @@ public class QuickSort extends Sortieralgorithmen
             {
                 this.deleteln();
                 f = f + t; // Die neuen Zahlen werden addiert
-                this.quickSort(array, n); //Erneutes Sortieren
+                this.quickSort(array, n); // Erneutes Sortieren
             }
             
-            t = f / 10; //Mittlerer Wert wird berechnet
+            t = f / 10; // Mittlerer Wert wird berechnet
             f = 0;
-            return (t); //Mittlerer Wert wird zurück gegeben
+            return (t); // Mittlerer Wert wird zurück gegeben
         }
 
 
