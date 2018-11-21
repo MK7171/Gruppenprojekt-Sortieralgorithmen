@@ -127,7 +127,7 @@ public class SuMAnwendung extends EBAnwendung
         if(test.inhaltAlsText()!="") //->damit der Knopf erst verwendet werden kann, wenn es auch was zum Sortieren gibt
         {
             bubble.bubbleSort(array, n);
-            zeit.setzeInhalt("BubbleSort:" + bubble.time(array, n));
+            zeit.setzeInhalt("BubbleSort:" + bubble.time(array, n) + "ms");
             status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
@@ -149,7 +149,7 @@ public class SuMAnwendung extends EBAnwendung
         if(test.inhaltAlsText()!="")
         {
             insertion.insertionSort(array, n);
-            zeit.setzeInhalt("InsertionSort:" + insertion.time(array, n));
+            zeit.setzeInhalt("InsertionSort:" + insertion.time(array, n) + "ms");
             status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
@@ -171,7 +171,7 @@ public class SuMAnwendung extends EBAnwendung
         if(test.inhaltAlsText()!="")
         {
             selection.selectionSort(array, n);
-            zeit.setzeInhalt("SelectionSort:" + selection.time(array, n));
+            zeit.setzeInhalt("SelectionSort:" + selection.time(array, n) + "ms");
             status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
@@ -193,7 +193,7 @@ public class SuMAnwendung extends EBAnwendung
         if(test.inhaltAlsText()!="")
         {
             quick.quickSort(array, n);
-            zeit.setzeInhalt("QuickSort:" + quick.time(array, n));      //ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
+            zeit.setzeInhalt("QuickSort:" + quick.time(array, n) + "ms");      //ruft die Methode der Zeitberechnung auf und zeigt das Ergebniss an
             status.setzeSchriftFarbe(5);        //status zeigt hier in der Farbe Grün an, das die Sortierung abgeschlossen ist
             status.setzeInhalt("FERTIG");
             sorted = true;
