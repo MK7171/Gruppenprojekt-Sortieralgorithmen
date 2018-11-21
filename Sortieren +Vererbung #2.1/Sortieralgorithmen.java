@@ -38,7 +38,7 @@ public class Sortieralgorithmen
         return inhalt;
     }
     
-    //Das Array wird als Zahlenkette auf dem Bildschirm dargestellt
+    // Das Array wird als Zahlenkette auf dem Bildschirm dargestellt
 
     public void println()
     {
@@ -48,7 +48,7 @@ public class Sortieralgorithmen
         e.aktuellesElement().setzeSchriftgroesse(20);
     }
 
-    public void deleteln() //löscht alle Sortierschritte
+    public void deleteln() // Löscht alle Sortierschritte
     {
         for (int i = 1; i<=e.laenge(); i++)
         {
@@ -59,8 +59,8 @@ public class Sortieralgorithmen
     }
     
     
-    /*Gibt Wert der gestoppten Zeit zurück
-    */ 
+    // Gibt Wert der gestoppten Zeit zurück
+     
     public double time()
         {
             return (t);
