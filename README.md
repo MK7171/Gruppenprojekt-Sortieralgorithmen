@@ -9,5 +9,5 @@ BubbleSort
 InsertionSort
 SelectionSort
 QuickSort
-
+MergeSort
 
